@@ -1,0 +1,162 @@
+:root {
+  --bg:#f0f8ff;
+  --text:#0a0a0a;
+  --card:#ffffff;
+  --accent:#1e3a8a;
+  --button:#1e3a8a;
+  --button-hover:#3b82f6;
+}
+
+html,body {
+  margin:0; padding:0;
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  max-width:1100px;
+  margin:32px auto;
+  padding:22px;
+}
+
+header {
+  display:flex;
+  align-items:center;
+  gap:16px;
+}
+
+.logo-img {
+  width:70px;
+  height:70px;
+  border-radius:50%;
+  object-fit:cover;
+  border:3px solid var(--accent);
+}
+
+h1 {
+  margin:0;
+  font-size:32px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:1.2px;
+  background: linear-gradient(90deg, #1e3a8a, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card {
+  background: var(--card);
+  border-radius:14px;
+  padding:20px;
+  margin-top:18px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+textarea {
+  width:100%;
+  min-height:220px;
+  border-radius:8px;
+  border:1px solid #ccc;
+  padding:12px;
+  font-size:15px;
+  resize: vertical;
+  color: var(--text);
+}
+
+.controls {
+  display:flex;
+  gap:10px;
+  margin-top:10px;
+  flex-wrap:wrap;
+}
+
+button {
+  padding:10px 16px;
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:600;
+  transition: all 0.3s ease;
+}
+
+.animated-btn {
+  background: var(--button);
+  color:white;
+  position:relative;
+  overflow:hidden;
+}
+
+.animated-btn:hover {
+  background: var(--button-hover);
+  transform: scale(1.05);
+}
+
+button.secondary {
+  background:transparent;
+  border:2px solid var(--accent);
+  color: var(--accent);
+}
+
+button.secondary:hover {
+  background: var(--accent);
+  color:white;
+  transform: scale(1.05);
+}
+
+.outputs {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin-top:14px;
+}
+
+.output-block {
+  background: #f9fafb;
+  border:1px solid #ddd;
+  border-radius:10px;
+  padding:12px;
+  min-height:120px;
+}
+
+.scene {
+  border-left:3px solid var(--accent);
+  padding-left:10px;
+  margin-bottom:10px;
+}
+
+.small {
+  font-size:13px;
+  color:#555;
+}
+
+.chip {
+  background: var(--accent);
+  color:white;
+  padding:6px 8px;
+  border-radius:999px;
+  font-size:13px;
+}
+
+footer {
+  margin-top:18px;
+  color:#333;
+  font-size:13px;
+  text-align:center;
+}
+
+.flex-between {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.copy-btn {
+  font-size:12px;
+  padding:4px 8px;
+  border-radius:6px;
+}
+
+@media(max-width:900px){
+  .outputs { grid-template-columns:1fr; }
+}

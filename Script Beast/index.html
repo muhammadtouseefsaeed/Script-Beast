@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ScriptBeast — Touseef Malik</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="https://i.postimg.cc/pT9y7Dcq/558094692-787841107555093-6027457938418604754-n.jpg" class="logo-img">
+      <div>
+        <h1>ScriptBeast — Touseef Malik</h1>
+        <div class="small">DESIGN AND DEVELOP BY TOUSEEF MALIK </div>
+      </div>
+    </header>
+
+    <div class="card">
+      <label class="small">Apni script yahan paste karein:</label>
+      <textarea id="scriptInput" placeholder="Scene 1: ...\n\nScene 2: ..."></textarea>
+
+      <div class="controls">
+        <button id="processBtn" class="animated-btn">Generate</button>
+        <button class="secondary animated-btn" id="clearBtn">Clear</button>
+        <button class="secondary animated-btn" id="downloadJson">Download JSON</button>
+      </div>
+
+      <div class="outputs">
+        <div class="output-block">
+          <strong>Title & Summary</strong>
+          <div id="titleArea" style="margin-top:8px"></div>
+          <div class="small" style="margin-top:8px">Keywords & hashtags:</div>
+          <div id="keywordsArea" style="display:flex;gap:6px;flex-wrap:wrap;margin-top:6px"></div>
+        </div>
+
+        <div class="output-block">
+          <div class="flex-between">
+            <strong>Voiceover</strong>
+            <button class="secondary copy-btn" id="copyVoice">Copy</button>
+          </div>
+          <pre id="voiceArea" style="white-space:pre-wrap;margin-top:8px"></pre>
+        </div>
+
+        <div class="output-block" style="grid-column:1 / -1">
+          <strong>Scenes — Image & Visual Prompts</strong>
+          <div id="scenesList" style="margin-top:10px"></div>
+        </div>
+      </div>
+    </div>
+
+    <footer>Designed & Powered by <b>Touseef Malik</b></footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
